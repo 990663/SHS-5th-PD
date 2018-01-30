@@ -33,14 +33,14 @@ def test_move(my_history, their_history, my_score, their_score, result):
         return False
 
 def move(my_history, their_history, my_score, their_score):
-    if len(my_history)==0: # It's the first round; collude.
+    if len(my_history)==0: 
             return 'c'
     else: 
         if 'b' in their_history[-1:]:
             return 'b'
         else:
-            if 'b' in their_history[-3:]: # If the other player has betrayed within last 3 rounds, 
-                if random.random()<0.75: # 80% of the other rounds
+            if 'b' in their_history[-3:]: 
+                if random.random()<0.75:
                     return 'b'   
                 else:
                     return 'c' 
